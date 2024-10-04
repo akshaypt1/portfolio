@@ -11,9 +11,8 @@
 <body>
 <div class="container mt-5">
     <div class="row">
-        <!-- Left Sidebar -->
         <div class="col-md-4 ">
-            <div class="sidebar p-3 border rounded ">
+            <div class="sidebar p-3 border rounded-">
                 <div class="text-center mb-4">
                     <img src="images.png" alt="Profile Photo" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
                 </div>
@@ -27,7 +26,7 @@
                 </div>
 
                 <div class="mb-3 text-center">
-                  <a href="#">
+                  <a href="#about">
                     <h5>About Me</h5></a>
                 </div>
 
@@ -44,46 +43,89 @@
         </div>
 
         <!-- Main Content -->
-        <div class="col-md-8 mt-5 text-center text-secondary">
+        <div class="col-md-8 mt-2 text-center">
             <h1> my works</h1><br>
             <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
             <div class="card ">
-                <img src="image1.jpg" class="card-img-top" alt="Image 1" height="100px">
-                <div class="card-body">
-                    <h5 class="card-title">Image 1</h5>
-                </div>
+                <img src="images.jpeg" class="card-img-top" alt="" height="150px" width="10px">apple
             </div>
         </div>
         <div class="col-md-6">
             <div class="card">
-                <img src="image2.jpg" class="card-img-top" alt="Image 2" height="100px">
-                <div class="card-body">
-                    <h5 class="card-title">Image 2</h5>
-                </div>
+                <img src="youtub.jpeg" class="card-img-top" alt="youtub" height="150px">youtub
             </div>
         </div>
-        <div class="col-md-6 mt-3">
+        <div class="col-md-6">
             <div class="card">
-                <img src="image3.jpg" class="card-img-top" alt="Image 3" height="100px">
-                <div class="card-body">
-                    <h5 class="card-title">Image 3</h5>
-                </div>
+                <img src="adidas.png" class="card-img-top" alt="adidas" height="150px">adidas
             </div>
         </div>
-        <div class="col-md-6 mt-3">
+        <div class="col-md-6">
           <div class="card">
-              <img src="image2.jpg" class="card-img-top" alt="Image 2" height="100px">
-              <div class="card-body">
-                  <h5 class="card-title">Image 2</h5>
-              </div>
+              <img src="web.jpeg" class="card-img-top" alt="Image 2" height="150px">web design
           </div>
       </div>
         <!-- Add more images as needed -->
     </div>
-</div>
+    <div id="about">
+    <div class="container mt-5">
+        <h2>ABOUT ME</h2>
+        Hello! I’m [Your Name], a passionate web developer with a knack for crafting beautiful and functional web applications. With [X] years of experience in the field, I specialize in front-end development, creating responsive and user-friendly interfaces that enhance the user experience.
+
+I hold a degree in [Your Degree] from [Your University], where I developed a solid foundation in programming principles and web technologies. Over the years, I’ve honed my skills in HTML, CSS, and JavaScript, and I’m proficient in modern frameworks like React and Angular.
+
+What I love most about web development is the challenge of turning complex ideas into elegant solutions. I enjoy collaborating with designers and other developers to create seamless web applications that meet user needs. My approach focuses on clean, maintainable code and best practices to ensure the longevity of the projects I work on.
+
+When I’m not coding, I’m usually exploring new technologies, contributing to open-source projects, or delving into the world of UI/UX design. I’m a firm believer in lifelong learning and regularly seek out new challenges to grow my skills.
+
+If you’re looking for a dedicated web developer who is eager to bring your ideas to life, let’s connect! I’m excited to collaborate on innovative projects that make a difference.
+
+    </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center">Subscribe me</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control mt-4" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Subscribe</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>   
+    
+
+
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="form-group">
+                        
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 </body>
 </html>

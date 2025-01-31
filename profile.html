@@ -33,10 +33,13 @@
 
         .hero-section {
             padding: 160px 0 100px;
-            height: 900px;
+            height: 800px;
             width: 100%;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background-image: url("images/image1.webp");
+            
+            
         }
+        
 
         .section-title {
             font-weight: 700;
@@ -54,9 +57,11 @@
             height: 3px;
             background: var(--primary-color);
         }
+       
+        
 
         .skill-card {
-            background: white;
+            background:rgba(0, 0, 0, 0.425);
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -104,14 +109,30 @@
             background: var(--dark-color);
             color: rgba(255, 255, 255, 0.8);
         }
+        .text{
+            color:white;
+        }
+        .project-image {
+            height: 300px;   /* Adjust the height to your preference */
+            width: 100%;         /* Makes the image responsive and take the full width of the container */
+        }
+        .view-btn {
+            transition: transform 0.3s ease-in-out;
+        }
+        .view-btn:hover {
+            transform: scale(1.1);
+        }
+        
+       
+        
         
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">AKSHAY PT</a>
+            <a class="navbar-brand fw-bold" href="#" style="color: black;">AKSHAY PT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -131,12 +152,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="display-4 fw-bold mb-4">Full Stack Web Developer</h1>
-                    <p class="lead mb-4">Building digital experiences that combine innovation with seamless functionality</p>
-                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                    <h1 class="display-4 fw-bold mb-4">Hi, i'm Akshay <br />Python Fullstack Web Developer.</h1>
+                    <p class="lead mb-4"></p>
+                    <a href="#contact" class="btn btn-primary">Know more</a>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-left">
-                    <img src="developer-illustration.svg" alt="Developer Illustration" class="img-fluid" style="max-width: 500px;">
+                    <img src="images/b5930bc8-2299-4ccf-952e-7dd69ae819b3.jpeg" alt="Developer Illustration" class="img-fluid" style="max-width: 300px;">
                 </div>
             </div>
         </div>
@@ -146,44 +167,85 @@
     <section id="skills" class="py-5">
         <div class="container py-5">
             <h2 class="section-title text-center" data-aos="fade-up">Technical Expertise</h2>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4" data-aos="zoom-in">
                     <div class="skill-card">
                         <i class="fas fa-code fa-2x mb-3" style="color: var(--primary-color);"></i>
                         <h5>Frontend Development</h5>
-                        <p class="text-muted">React,JavaScript, HTML5, css </p>
+                        <p class="text">React, JavaScript, HTML5, CSS</p>
                     </div>
                 </div>
+    
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="skill-card">
+                        <i class="fas fa-code fa-2x mb-3" style="color: var(--primary-color);"></i>
+                        <h5>Backend Development</h5>
+                        <p class="text">Django, Flask</p>
+                    </div>
+                </div>
+    
                 <!-- Add more skill cards -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container py-5">
-            <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="project-card">
-                        <div class="card-img-top overflow-hidden">
-                            <img src="project1.jpg" class="img-fluid" alt="Project">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">E-commerce Platform</h5>
-                            <p class="card-text text-muted">shopping solution</p>
-                            <div class="d-flex gap-2">
-                                <span class="badge bg-primary">python</span>
-                                <span class="badge bg-secondary">Node.js</span>
-                            </div>
-                        </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="skill-card">
+                        <i class="fas fa-code fa-2x mb-3" style="color: var(--primary-color);"></i>
+                        <h5>Database Management</h5>
+                        <p class="text">MySQL</p>
                     </div>
                 </div>
-                <!-- Add more project cards -->
             </div>
         </div>
     </section>
+    
 
+   <!-- Projects Section -->
+   <section id="projects" class="py-5 bg-light">
+    <div class="container py-5">
+        <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
+        <div class="row g-4 d-flex justify-content-center">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="project-card">
+                    <div class="card-img-top overflow-hidden">
+                        <img src="images/loginpage.jpg" class="img-fluid project-image" alt="Project">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">E-commerce Platform</h5>
+                        <p class="card-text text-muted">Shopping solution</p>
+                        <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="project-card">
+                    <div class="card-img-top overflow-hidden">
+                        <img src="images/images.jpeg" class="img-fluid project-image" alt="Project">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Apple Clone</h5>
+                        <p class="card-text text-muted">Webpage</p>
+                        <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="project-card">
+                    <div class="card-img-top overflow-hidden">
+                        <img src="images/bookmyshow.jpeg" class="img-fluid project-image" alt="Project">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Book MyShow</h5>
+                        <p class="card-text text-muted">Webpage</p>
+                        <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
     <!-- Contact Section -->
     <section id="contact" class="contact-section py-5">
         <div class="container py-5">
@@ -213,11 +275,12 @@
     <footer class="py-4">
         <div class="container text-center">
             <div class="d-flex justify-content-center gap-3 mb-3">
-                <a href="#" class="text-white"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://github.com/akshaypt1" class="text-white"><i class="fab fa-github fa-lg"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
-            <p class="mb-0">&copy; 2023 John Doe. All rights reserved.</p>
+            <p class="mb-0">&copy; 2023. All rights reserved.</p>
         </div>
     </footer>
 

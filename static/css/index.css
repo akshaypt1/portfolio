@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #2563eb;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-color);
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.hero-section {
+    padding: 160px 0 100px;
+    height: 800px;
+    width: 100%;
+    background-image: url("../images/image1.webp");
+    
+    
+    
+    
+}
+#skills{
+    height: 800px;
+    width: 100%;
+    background-image: url("../images/1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+#skills h5{
+    font-size: 30px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+
+
+.skill-card {
+    background:rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* .project-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* .project-card img {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+} */
+
+.contact-section {
+    background: var(--dark-color);
+    color: white;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+footer {
+    background: var(--dark-color);
+    color: rgba(255, 255, 255, 0.8);
+}
+.text{
+    color:white;
+}
+.project-image {
+    height: 300px;   /* Adjust the height to your preference */
+    width: 100%;         /* Makes the image responsive and take the full width of the container */
+}
+.view-btn {
+    transition: transform 0.3s ease-in-out;
+}
+.view-btn:hover {
+    transform: scale(1.1);
+}
+
+/* About Me Section */
+#about {
+    
+    padding: 80px 0;
+    background-image: url("../images/ak.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 600px; /* Ensures height */
+    display: flex;
+    align-items: center;
+    color: white; /* Text color for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#about .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Image Animation */
+#about img {
+    border: 5px solid #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about img:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styling */
+#about h3 {
+    font-size: 2rem;
+    color: #ede4e4;
+}
+#about h2 {
+    color: white;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #e7dede;
+    line-height: 1.6;
+}
+
+/* Animated Button */
+#about .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#about .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 91, 187, 0.3);
+}
+#projects{
+    height:auto;
+    width: 100%;
+    background-image: url("../images/2.jpeg");
+    color: white;
+}
+
+/* Project Section Styling */
+.project-card {
+    position: relative;
+    left: 250px;
+    width: 60%;
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Dark overlay for better text contrast */
+.project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.363); /* Dark semi-transparent overlay */
+    backdrop-filter: blur(1px); /* Blur effect */
+    z-index: 1;
+}
+
+/* Content Styling */
+.project-card .project-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title and Description Styling */
+.project-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.view-btn {
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #ff5722;
+    color: white;
+}
+
+

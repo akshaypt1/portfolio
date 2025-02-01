@@ -13,120 +13,7 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --dark-color: #1e293b;
-            --light-color: #f8fafc;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark-color);
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-
-        .hero-section {
-            padding: 160px 0 100px;
-            height: 800px;
-            width: 100%;
-            background-image: url("images/image1.webp");
-            
-            
-        }
-        
-
-        .section-title {
-            font-weight: 700;
-            position: relative;
-            margin-bottom: 3rem;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-        }
-       
-        
-
-        .skill-card {
-            background:rgba(0, 0, 0, 0.425);
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .project-card img {
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .contact-section {
-            background: var(--dark-color);
-            color: white;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            border: none;
-            padding: 0.8rem 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: var(--dark-color);
-            color: rgba(255, 255, 255, 0.8);
-        }
-        .text{
-            color:white;
-        }
-        .project-image {
-            height: 300px;   /* Adjust the height to your preference */
-            width: 100%;         /* Makes the image responsive and take the full width of the container */
-        }
-        .view-btn {
-            transition: transform 0.3s ease-in-out;
-        }
-        .view-btn:hover {
-            transform: scale(1.1);
-        }
-        
-       
-        
-        
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
     <!-- Navigation -->
@@ -154,14 +41,43 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <h1 class="display-4 fw-bold mb-4">Hi, i'm Akshay <br />Python Fullstack Web Developer.</h1>
                     <p class="lead mb-4"></p>
-                    <a href="#contact" class="btn btn-primary">Know more</a>
+                    <a href="#about" class="btn btn-primary">Know more</a>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="fade-left">
-                    <img src="images/b5930bc8-2299-4ccf-952e-7dd69ae819b3.jpeg" alt="Developer Illustration" class="img-fluid" style="max-width: 300px;">
+                    <img src="images/b5930bc8-2299-4ccf-952e-7dd69ae819b3.jpeg" alt="." class="img-fluid" style="max-width: 300px;">
                 </div>
             </div>
         </div>
     </section>
+    <!-- end hero section -->
+
+     <!-- About Me Section -->
+<section id="about" class="py-5">
+    <div class="container py-5">
+        <h2 class="section-title text-center" data-aos="fade-up">About Me</h2>
+        <div class="row align-items-center">
+            <!-- Left: Image -->
+            <div class="col-lg-5 text-center" data-aos="fade-right">
+                <img src="{{ url_for('static', filename='images/df83628e-13c8-47d9-a90d-89c725d4697a.jpeg') }}" 
+                     alt="Akshay PT" 
+                     class="img-fluid rounded-circle shadow-lg" 
+                     style="max-width: 350px;">
+            </div>
+            
+            <!-- Right: Text Content -->
+            <div class="col-lg-7" data-aos="fade-left">
+                <h3 class="fw-bold">I'm Akshay PT</h3>
+                <p class="lead">A passionate Python Fullstack Developer with expertise in Flask, Django, React, and modern web technologies.</p>
+                <p>I love building efficient and scalable web applications. With a strong foundation in frontend and backend development, I aim to create seamless user experiences.</p>
+                <p>Beyond coding, I'm an avid learner, always exploring new technologies to stay ahead in the field.</p>
+                <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn btn-primary" target="_blank">
+                    View Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-5">
@@ -198,14 +114,15 @@
     
 
    <!-- Projects Section -->
-   <section id="projects" class="py-5 bg-light">
+<!-- Projects Section -->
+<!-- <section id="projects" class="py-5 bg-light">
     <div class="container py-5">
         <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
         <div class="row g-4 d-flex justify-content-center">
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="project-card">
                     <div class="card-img-top overflow-hidden">
-                        <img src="images/loginpage.jpg" class="img-fluid project-image" alt="Project">
+                        <img src="{{ url_for('static', filename='images/loginpage.jpg') }}" class="img-fluid project-image" alt="Project">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">E-commerce Platform</h5>
@@ -218,7 +135,7 @@
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="project-card">
                     <div class="card-img-top overflow-hidden">
-                        <img src="images/images.jpeg" class="img-fluid project-image" alt="Project">
+                        <img src="{{ url_for('static', filename='images/images.jpeg') }}" class="img-fluid project-image" alt="Project">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Apple Clone</h5>
@@ -231,7 +148,7 @@
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
                 <div class="project-card">
                     <div class="card-img-top overflow-hidden">
-                        <img src="images/bookmyshow.jpeg" class="img-fluid project-image" alt="Project">
+                        <img src="{{ url_for('static', filename='images/bookmyshow.jpeg') }}" class="img-fluid project-image" alt="Project">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Book MyShow</h5>
@@ -241,6 +158,43 @@
                 </div>
             </div>
         </div>
+    </div>
+</section> -->
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+    <div class="container py-5">
+        <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project-card" style="background-image: url('{{ url_for('static', filename='images/loginpage.jpg') }}');">
+            <div class="overlay"></div>
+            <div class="project-content">
+                <h3>E-commerce Platform</h3>
+                <p>Shopping solution</p>
+                <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" style="background-image: url('{{ url_for('static', filename='images/images.jpeg') }}');">
+            <div class="overlay"></div>
+            <div class="project-content">
+                <h3>Apple Clone</h3>
+                <p>Webpage</p>
+                <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" style="background-image: url('{{ url_for('static', filename='images/bookmyshow.jpeg') }}');">
+            <div class="overlay"></div>
+            <div class="project-content">
+                <h3>Book MyShow</h3>
+                <p>Webpage</p>
+                <a href="#" class="btn btn-primary view-btn" data-aos="zoom-in">View</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -278,7 +232,7 @@
                 <a href="https://github.com/akshaypt1" class="text-white"><i class="fab fa-github fa-lg"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.instagram.com/akshaei.__/?utm_source=ig_web_button_share_sheet" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
             <p class="mb-0">&copy; 2023. All rights reserved.</p>
         </div>

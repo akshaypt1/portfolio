@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--dark-color);
 }
 
@@ -19,55 +19,7 @@ body {
     padding: 160px 0 100px;
     height: 800px;
     width: 100%;
-    background-image: url("../images/image1.webp");
-    
-    
-    
-    
-}
-#skills{
-    height: 800px;
-    width: 100%;
-    background-image: url("../images/1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
-#skills h5{
-    font-size: 30px;
-}
-
-.section-title {
-    font-size: 40px;
-    font-weight: 800;
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--primary-color);
-}
-
-
-
-.skill-card {
-    background:rgba(0, 0, 0, 0.425);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-image: url("../images/image1.webp"); 
 }
 
 /* .project-card {
@@ -179,8 +131,8 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0px 5px 15px rgba(0, 91, 187, 0.3);
 }
-#projects{
-    height:auto;
+#projects {
+    height: auto;
     width: 100%;
     background-image: url("../images/2.jpeg");
     color: white;
@@ -189,7 +141,8 @@ footer {
 /* Project Section Styling */
 .project-card {
     position: relative;
-    left: 250px;
+    left: 50%; /* Center the cards */
+    transform: translateX(-50%); /* Ensure centered alignment */
     width: 60%;
     height: 300px; /* Adjust height as needed */
     background-size: cover;
@@ -201,6 +154,7 @@ footer {
     margin-bottom: 30px;
     border-radius: 15px;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 /* Dark overlay for better text contrast */
@@ -235,6 +189,8 @@ footer {
     margin-bottom: 20px;
 }
 
+
+
 /* Button Styling */
 .view-btn {
     background: #ff9800;
@@ -248,6 +204,145 @@ footer {
 .view-btn:hover {
     background: #ff5722;
     color: white;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .project-card {
+        width: 80%; /* Adjust the card width */
+        height: 250px; /* Adjust height */
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem; /* Adjust title font size */
+    }
+
+    .project-card p {
+        font-size: 1rem; /* Adjust description font size */
+    }
+
+    .view-btn {
+        padding: 8px 16px; /* Adjust button size */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .project-card {
+        width: 90%; /* Increase width for smaller screens */
+        height: 220px; /* Adjust height */
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem; /* Adjust title font size */
+    }
+
+    .project-card p {
+        font-size: 0.9rem; /* Adjust description font size */
+    }
+
+    .view-btn {
+        padding: 6px 12px; /* Adjust button size */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+#skills {
+    height: 800px;
+    width: 100%;
+    background-image: url("../images/1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Skill Title Styling */
+#skills h5 {
+    font-size: 30px;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+/* Section Title Underline */
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Skill Card Styling */
+.skill-card {
+    background: rgba(0, 0, 0, 0.425);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 20px; /* Add space between skill cards */
+}
+
+/* Hover Effect on Skill Cards */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets */
+@media (max-width: 768px) {
+    /* Skill Card Layout */
+    .skill-card {
+        width: 45%; /* Two cards per row on tablet */
+        margin: 10px;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 32px; /* Reduce font size for smaller screens */
+    }
+
+    /* Skill Title */
+    #skills h5 {
+        font-size: 24px; /* Adjust skill title size */
+    }
+}
+
+/* For Mobile Screens */
+@media (max-width: 480px) {
+    #skills {
+        height: auto; /* Let section height adjust based on content */
+        padding: 15px; /* Reduce padding on mobile */
+    }
+
+    /* Skill Card Layout */
+    .skill-card {
+        width: 100%; /* Stack skill cards on top of each other */
+        margin-bottom: 20px;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 28px; /* Reduce section title font size */
+    }
+
+    /* Skill Title */
+    #skills h5 {
+        font-size: 20px; /* Adjust skill title font size */
+    }
 }
 
 
